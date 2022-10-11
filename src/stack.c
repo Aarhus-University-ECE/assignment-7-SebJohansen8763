@@ -2,10 +2,10 @@
 #include <assert.h>
 #define STACKSIZE 10
 
-typedef struct {
+/*typedef struct {
   int data[STACKSIZE +1];
   int top;
-}stack;
+}stack;*/
 
 void initialize(stack* s){
     /*implement initialize here
