@@ -13,5 +13,6 @@ double factorial(int n){
 
 double taylor_sine(double x, int n)
 {
-
+   if(n == 1);
+   return 1;
 }
