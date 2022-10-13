@@ -1,34 +1,35 @@
 #include "stack.h"
 #include <assert.h>
-#define STACKSIZE 10
-
-/*typedef struct {
-  int data[STACKSIZE +1];
-  int top;
-}stack;*/
+#include <stdbool.h>
 
 void initialize(stack* s){
-    /*implement initialize here
-    post condition: s->top = -1;  */
+    /* implement initialize here */
+    s->head = NULL;  
 }
 
 void push(int x, stack* s){
-    //implement push here
+    node *element = (node *)malloc(sizeof(node));
+    element->next = s->head;
+    s->head = element;
+    element->data = x;
 }
 
 int pop(stack* s){
-    /* implement pop here
-  assert(s->top>=0);  */
+  assert(s->head);
+  int popped = s->head->data;
+  s->head = s->head->next;
 
-  return -1;
+  return popped;
 }
 
 bool empty(stack* s){
-  //implement empty here
+  if(s->head == NULL){
+    return true;
+  }
   return false;
 }
 
 bool full(stack* s) {
-   /* int top = STACKSIZE -1;??????*/
+   
   return false;
 }
