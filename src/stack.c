@@ -30,6 +30,6 @@ bool empty(stack* s){
 }
 
 bool full(stack* s) {
-   
+   //is never empty
   return false;
 }
