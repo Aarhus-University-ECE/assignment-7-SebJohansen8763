@@ -11,8 +11,25 @@ double factorial(int n){
    return result;
 }
 
-double taylor_sine(double x, int n)
+double taylor_sine(double x, int n){
+   
+   int i = 1; // loop tæller der bestemmer om der skal tages fra eller ligges til
+   int j = 3; // 
+   double res = x;
+
+   while(i<=n){
+      if(i % 2 == 1){
+         res -= pow(x , j)/factorial(j);
+      }
+      else{
+         res += pow(x , j)/factorial(j);
+      }
+   }
 {
-   if(n == 1);
-   return 1;
+   i++; //tilføjer 1 til int i
+   j+=2; // tilføjer 2 til j
+}
+   
+return res;
+
 }
